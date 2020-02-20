@@ -5,6 +5,11 @@ jdk:
 before_install:
   - chmod +x gradlew
 
+addons:
+  apt:
+    packages:
+      - sshpass
+
 branches:
   only:
     - master
