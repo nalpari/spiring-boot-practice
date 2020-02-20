@@ -1,4 +1,4 @@
-#SpringBoot + Gradle + Travis CI + Coveralls
+# SpringBoot + Gradle + Travis CI + Coveralls
 
 ![Build Status](https://travis-ci.org/nalpari/spiring-boot-practice.svg?branch=master)
 
