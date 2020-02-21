@@ -22,10 +22,21 @@ repositories {
     mavenCentral()
 }
 
+apply plugin: 'com.github.kt3k.coveralls'
+apply plugin: 'jacoco'
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2'
 }
